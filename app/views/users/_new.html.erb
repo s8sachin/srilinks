@@ -1,0 +1,46 @@
+
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Sign Up </h4>
+      </div>
+      <div class="modal-body">
+        <%= form_for @user, remote: true do |f| %>
+
+        <p>
+          <%= f.label :name %><br />
+          <%= f.text_field :name,:required => true, class: 'form-control'%>
+          <div id="error_explanation"> <%= show_errors(@user, :name) %></div>
+        </p>
+        <p>
+          <%= f.label :username %><br />
+          <%= f.text_field :username,:required => true, class: 'form-control'%>
+          <div id="error_explanation"> <%= show_errors(@user, :username) %></div>
+        </p>
+        <p>
+          <%= f.label :email %><br />
+          <%= f.email_field :email ,:required => true, class: 'form-control'%>
+          <div id="error_explanation"> <%= show_errors(@user, :email) %></div>
+        </p>
+        <p>
+          <%= f.label :password %><br />
+          <%= f.password_field :password ,:required => true, class: 'form-control'%>
+        </p>
+        <p>
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+          <div id="error_explanation"> <%= show_errors(@user, :password) %></div>
+        </p>
+        <%= f.submit "Sign up" ,class: "btn btn-primary "  %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+

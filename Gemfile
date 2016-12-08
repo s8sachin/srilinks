@@ -7,6 +7,7 @@ gem 'rails', '4.2.7.1'
 # gem 'sqlite3'
 gem 'pg'
 gem 'pry'
+gem "bcrypt-ruby", :require => "bcrypt"
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
 gem 'rails_12factor', group: :production

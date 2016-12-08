@@ -1,0 +1,30 @@
+<!-- Modal -->
+
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Log in</h4>
+			</div>
+			<div class="modal-body">
+				<%= form_tag sessions_path do %> 
+				<p>
+					<%= label_tag :email %>
+					<%= text_field_tag :email, params[:email],:required => true, class: 'form-control' %>
+				</p>
+				<p>
+					<%= label_tag :password %>
+					<%= password_field_tag :password, params[:password] ,:required => true, class: 'form-control'%>
+				</p>
+				<p class="button"><%= submit_tag "Log in" %></p>
+				<% end %>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+
+	</div>
+</div>
